@@ -1,24 +1,22 @@
 import BasicLayout from "./components/BasicLayout";
 import './App.css';
 import {
-  BrowserView,
-  MobileView,
   isBrowser,
     isMobile,
     isTablet
 } from "react-device-detect";
 
-function BrowserV() {
-  return <BrowserView>
-    <BasicLayout/>
-  </BrowserView>;
-}
-
-function MobileV(){
-  return <MobileView>
-    <BasicLayout />
-  </MobileView>;
-}
+// function BrowserV() {
+//   return <BrowserView>
+//     <BasicLayout/>
+//   </BrowserView>;
+// }
+//
+// function MobileV(){
+//   return <MobileView>
+//     <BasicLayout />
+//   </MobileView>;
+// }
 
 function App() {
   return (
