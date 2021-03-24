@@ -3,8 +3,7 @@ import './App.css';
 import {
   BrowserView,
   MobileView,
-  isBrowser,
-  isMobile
+  isBrowser
 } from "react-device-detect";
 
 function BrowserV() {
