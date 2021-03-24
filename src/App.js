@@ -3,7 +3,9 @@ import './App.css';
 import {
   BrowserView,
   MobileView,
-  isBrowser
+  isBrowser,
+    isMobile,
+    isTablet
 } from "react-device-detect";
 
 function BrowserV() {
@@ -20,10 +22,9 @@ function MobileV(){
 
 function App() {
   return (
-      (isBrowser)?
-          <BrowserV/>
-          :
-      <MobileV/>
+      <>
+        {`browser: ${isBrowser} mobile: ${isMobile} tablet: ${isTablet}`}
+      </>
   );
 }
 
