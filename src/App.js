@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import BasicLayout from "./components/BasicLayout";
 import './App.css';
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile
+} from "react-device-detect";
+
+function BrowserV() {
+  return <BrowserView>
+    <BasicLayout/>
+  </BrowserView>;
+}
+
+function MobileV(){
+  return <MobileView>
+    <BasicLayout />
+  </MobileView>;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      (isBrowser)?
+          <BrowserV/>
+          :
+      <MobileV/>
   );
 }
 
